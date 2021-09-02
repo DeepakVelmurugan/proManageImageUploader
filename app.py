@@ -64,7 +64,7 @@ def upload():
         _id = randint(1,1000000)
         file_name = company_name+"/%s.jpg" % _id
         s3.upload_file('images/testimage.jpg',BUCKET_NAME,file_name)
-        remove_images()
+        #remove_images()
         return jsonify({'message':'success'})
     except Exception as e:
         print(e)
