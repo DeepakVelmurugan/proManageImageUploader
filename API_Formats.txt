@@ -1,0 +1,27 @@
+API formats for ImageUploader:
+
+/ - [GET]
+Gets list of folders and images
+
+/upload - [POST]
+uploads image to S3
+form-data
+{
+"image_name" : file uploaded,
+"company_name" : "testcompany"
+}
+ 
+/delete - [DELETE]
+deletes image from S3 given image name
+Raw JSON
+{
+"company_name" : "testFromEc2",
+"image_name" : "image1.jpg"
+}
+
+/getImages - [POST]
+Given image and company name returns encoded string of the image
+{
+    "company_name" : "testFromEc2",
+    "image_name":"665011.jpg"
+}
